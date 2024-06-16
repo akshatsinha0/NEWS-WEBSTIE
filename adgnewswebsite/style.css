@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* Base Styles */
+/* Resets margin and padding for all elements and sets a default font */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+}
+
+/* Sets the body background color and text color */
+body {
+    background-color: #800000; /* Changed to maroon */
+    font-family: "Playfair Display", serif;
+    width: 100%;
+    min-height: 100vh;
+    color: #ffffff98;
+    overflow-y: overlay;
+    }
+
+/* Removes underline from all anchor tags */
+a {
+    text-decoration: none;
+}
+
+/* Removes list bullets */
+ul {
+    list-style: none;
+}
+
+/* Header Styles */
+/* Styles for the header container */
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 100; /* Ensures header stays on top */
+}
+
+/* Styles for the logo */
+.logo {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: #f66;
+}
+
+/* Styles for the navigation menu */
+nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Styles for navigation links */
+nav ul li a {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    color: #ddd;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    border-color: #ddd;
+    border-radius: 4px;
+}
+
+/* Styles for the mobile menu icon (hidden by default) */
+.bar {
+    display: none;
+}
+
+.bar i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+/* Top Headlines Section */
+/* Container styles for the top headlines section */
+.topHeadlines {
+    padding: 100px 50px 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Left section is larger than right */
+    gap: 30px;
+}
+
+/* Styles for the left side of top headlines */
+.topHeadlines .left {
+    padding: 10px;
+    width: 100%;
+    height: 500px;
+}
+
+/* Title styles for the left section */
+.topHeadlines .left > .title {
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Container for the top news list */
+.topHeadlines .left .topNews {
+    padding: 7px;
+    height: 85%;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    overflow-y: scroll; /* Enables scrolling */
+}
+
+/* Styles for individual news items */
+.topHeadlines .left .topNews .news {
+    display: grid;
+    grid-template-columns: auto auto; /* Image and text side by side */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for the news image */
+.topHeadlines .left .topNews .news .img {
+    width: 170px;
+    height: 100%;
+    max-height: 120px;
+    min-height: 90px;
+    background-color: #a04; /* Placeholder color */
+}
+
+.topHeadlines .left .topNews .news .img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles for the news text */
+.topHeadlines .left .topNews .news .text {
+    margin-inline: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the news title link */
+.topHeadlines .left .topNews .news .text .title a {
+    text-decoration: none;
+}
+
+/* Styles for the news title text */
+.topHeadlines .left .topNews .news .text .title a p {
+    color: #fff;
+    display: inline;
+}
+
+/* Hover effect for the news title */
+.topHeadlines .left .topNews .news .text .title a p:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the right side of top headlines */
+.topHeadlines .right {
+    padding: 10px 30px;
+}
+
+/* Title styles for the right section */
+.topHeadlines .right > .title {
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Styles for the breaking news image */
+.topHeadlines .right .img {
+    width: 100%;
+    height: 400px;
+    background-color: #a04; /* Placeholder color */
+}
+
+.topHeadlines .right .img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles for the breaking news text */
+.topHeadlines .right .text {
+    padding: 20px 15px 10px;
+}
+
+/* Styles for the breaking news title link */
+.topHeadlines .right .text .title a {
+    text-decoration: none;
+}
+
+/* Styles for the breaking news title text */
+.topHeadlines .right .text .title a h2 {
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    display: inline;
+    cursor: pointer;
+}
+
+/* Hover effect for the breaking news title */
+.topHeadlines .right .text .title a h2:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the breaking news description */
+.topHeadlines .right .text .description {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+/* Page 2 News Sections */
+/* Container styles for the page 2 section */
+.page2 {
+    width: 100%;
+    padding: 0 50px 50px;
+    display: grid;
+    gap: 30px;
+}
+
+/* Styles for individual news sections on page 2 */
+.page2 .news {
+    padding: 10px;
+}
+
+/* Title styles for the news sections */
+.page2 .news .title {
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Container for the news list */
+.page2 .news .newsBox {
+    padding: 7px;
+    height: 450px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    overflow-y: scroll; /* Enables scrolling */
+}
+
+/* Styles for individual news items */
+.page2 .news .newsBox .news {
+    display: grid;
+    grid-template-columns: auto auto; /* Image and text side by side */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for the news image */
+.page2 .news .newsBox .news .img {
+    width: 170px;
+    height: 100%;
+    max-height: 120px;
+    min-height: 90px;
+    background-color: #a04; /* Placeholder color */
+}
+
+.page2 .news .newsBox .news .img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles for the news text */
+.page2 .news .newsBox .news .text {
+    margin-inline: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the news title link */
+.page2 .news .newsBox .news .text .title a {
+    text-decoration: none;
+}
+
+/* Styles for the news title text */
+.page2 .news .newsBox .news .text .title a p {
+    color: #fff;
+    display: inline;
+}
+
+/* Hover effect for the news title */
+.page2 .news .newsBox .news .text .title a p:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+/* Container styles for the footer */
+.footer {
+    width: 100%;
+    padding: 50px;
+    background-color: #202020;
+}
+
+/* Container for the footer content */
+.footer .box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Styles for the left side of the footer */
+.footer .box .left {
+    display: flex;
+    gap: 50px;
+}
+
+/* Styles for footer categories and contact headers */
+.footer .box .left .categories p,
+.footer .box .left .contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Styles for category and contact items */
+.footer .box .left .categories div,
+.footer .box .left .contact div {
+    margin-bottom: 8px;
+}
+
+/* Styles for category and contact text */
+.footer .box .left .categories div p,
+.footer .box .left .contact div {
+    font-size: 14px;
+}
+
+/* Styles for social media icons */
+.footer .box .left .contact .icon i {
+    font-size: 20px;
+    color: #ddd;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Styles for the right side of the footer */
+.footer .box .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Styles for the newsletter subscription section */
+.footer .box .right .newsletter p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Container for the email input and submit button */
+.footer .box .right .newsletter .email {
+    display: flex;
+    gap: 10px;
+}
+
+/* Styles for the email input */
+.footer .box .right .newsletter .email input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Styles for the submit button */
+.footer .box .right .newsletter .email button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #f66;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styles for the footer copyrights section */
+.footer .copyrights {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Responsive Design */
+/* Media query for screens up to 768px wide */
+@media (max-width: 768px) {
+    /* Display the mobile menu icon */
+    .bar {
+        display: block;
+    }
+
+    /* Hide navigation menu and make it dropdown */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #202020;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Styles for navigation links in mobile view */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Adjust top headlines section for mobile */
+    .topHeadlines {
+        padding: 100px 20px 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .topHeadlines .left,
+    .topHeadlines .right {
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Reduce height of the breaking news image in mobile view */
+    .topHeadlines .right .img {
+        height: 300px;
+    }
+
+    /* Adjust page 2 section padding for mobile */
+    .page2 {
+        padding: 0 20px 20px;
+        gap: 20px;
+    }
+
+    /* Adjust footer padding for mobile */
+    .footer {
+        padding: 20px;
+    }
+
+    /* Stack footer content vertically in mobile view */
+    .footer .box {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Center align the right side content in the footer for mobile */
+    .footer .box .right {
+        align-items: center;
+    }
+}
